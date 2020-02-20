@@ -1,0 +1,72 @@
+<view id="container">
+  <view id="search">
+    <view class="search_header">
+      <van-icon name="search" size="1.5em" />
+      <input class="search_p" placeholder="搜索" />
+    </view>
+    <van-icon name="scan" size="1.5em" />
+  </view>
+  <view  id="nav_txt">
+    <scroll-view scroll-x class="nav_txt" bindtap="nav_txt">
+      <view class="nav_txt_item" data-index="1">
+        <view style="font-weight:500;" class="nav_txt_active_up">推荐</view>
+        <view style="color:#9c9c9c;font-size:24rpx;padding: 0 6px;" class="nav_txt_active_down">猜你喜欢</view>
+      </view>
+      <view class="nav_txt_item {{nav_index==2?'active':''}}" data-index="2">
+        <view style="font-weight:500;">手工</view>
+        <view style="color:#9c9c9c;font-size:24rpx;padding: 0 6px;">必败单品</view>
+      </view>
+      <view class="nav_txt_item {{nav_index==3?'active':''}}" data-index="3">
+        <view style="font-weight:500;">字画</view>
+        <view style="color:#9c9c9c;font-size:24rpx;padding: 0 6px;">大神推荐</view>
+      </view>
+      <view class="nav_txt_item {{nav_index==4?'active':''}}" data-index="4">
+        <view style="font-weight:500;">文字</view>
+        <view style="color:#9c9c9c;font-size:24rpx;padding: 0 6px;">好好学习</view>
+      </view>
+      <view class="nav_txt_item {{nav_index==5?'active':''}}" data-index="5">
+        <view style="font-weight:500;">多肉</view>
+        <view style="color:#9c9c9c;font-size:24rpx;padding: 0 6px;">陶冶情操</view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view id="content">
+    <van-grid column-num="2" border="{{ false }}" gutter="15" >
+      <van-grid-item use-slot wx:for="{{ 9 }}" wx:for-item="index" url="/pages/commodity-detail/commodity-detail">
+        <view class="content">
+          <image src="https://picsum.photos/200" style="width:300rpx;height:200rpx;margin-top:15rpx"></image>
+          <view>动物手工艺8个</view>
+          <view style="color:#9c9c9c;font-size:24rpx;">牛兔猫狗羊熊虎狗</view>
+          <view class="content_bottom">
+            <view>
+              <view style="color:#ff4d94;">￥158</view>
+              <view style="color:#9c9c9c;font-size:24rpx;text-decoration:line-through">￥178</view>
+            </view>
+            <view class="content_car">
+              <image src="../../images/car.png" style="width:40rpx;height:40rpx;"></image>
+            </view>
+          </view>
+        </view>
+      </van-grid-item>
+    </van-grid>
+  </view>
+
+  <!-- <view id="content">
+    <view wx:for="{{[1,2,3]}}" wx:key="index" class="content">
+      <image style="width:150rpx;height:200rpx;"></image>
+      <view>大标题</view>
+      <view>小标题</view>
+      <view class="content_bottom">
+        <view>
+          <view>￥158</view>
+          <view>￥178</view>
+        </view>
+        <view class="content_car">
+          <image src="../../images/car.png" style="width:40rpx;height:40rpx;"></image>
+        </view>
+       
+      </view>
+    </view>
+  </view> -->
+</view>

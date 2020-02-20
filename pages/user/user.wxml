@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view id="container">
+  <view id="userImg">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <view class="user">
+        <view class="userinfo">
+          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view style="padding:30rpx;">
+    <van-cell title="我的订单" is-link value="全部订单" url="/pages/user-order/user-order" />
+    <van-grid border="{{ false }}">
+      <van-grid-item icon="/images/delivery.png" text="代配送" />
+      <van-grid-item icon="/images/harvest.png" text="待收货" />
+      <van-grid-item icon="/images/complete.png" text="已完成" />
+      <van-grid-item icon="/images/qian.png" text="已取消" />
+    </van-grid>
+
+    <view style="margin-top:15rpx;">
+      <van-grid column-num="3" border="{{ false }}">
+        <van-grid-item icon="/images/address.png" text="地址管理"   url="/pages/user-address/user-address"/>
+        <van-grid-item icon="/images/kefu.png" text="联系客服" />
+        <van-grid-item icon="/images/settin.png" text="账号设置" />
+      </van-grid>
+    </view>
+  </view>
+
+</view>

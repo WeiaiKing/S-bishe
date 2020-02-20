@@ -1,0 +1,52 @@
+<view id="container">
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper circular="true" indicator-dots="true" autoplay="true" interval="4000" duration="500">
+        <block wx:for="{{background}}" wx:key="{{index}}">
+          <swiper-item class="swiper-item auth">
+            <image mode="aspectFit" src="{{item}}"></image>
+            <van-button class="btn" type="info" open-type="getUserInfo" bind:getuserinfo="onAuth2" data-url="/pages/faxian/detail/detail?id={{item.id}}" hover-class="hover_btn"></van-button>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view id="header">
+    <view style="margin-bottom:20rpx;">木雕木制工艺品创意手工生日礼物</view>
+    <view style="color:#ff4d94;">￥158</view>
+    <view style="color:#9c9c9c;font-size:24rpx;text-decoration:line-through">￥178</view>
+    <view style="color:#555;margin-top:15rpx;">发布者：易烊千玺</view>
+  </view>
+  <view id="body">
+    <view style="color:black;margin-bottom:20rpx;">商品详情</view>
+    <view style="margin-botttom:15rpx;">
+      <span>材质：</span>
+      <span>柚木</span>
+    </view>
+    <view style="margin-botttom:15rpx;">
+      <span>尺寸：</span>
+      <span>高20cm</span>
+    </view>
+    <view style="margin-botttom:15rpx;">
+      <span>重量：</span>
+      <span>550g</span>
+    </view>
+    <view style="margin-botttom:15rpx;">
+      <span>工艺：</span>
+      <span>手工</span>
+    </view>
+    <image src="https://picsum.photos/800" style="height:300rpx;width:100%;margin-top:20rpx;" mode="aspectFill"></image>
+    <image src="https://picsum.photos/600" style="height:300rpx;width:100%;margin-top:20rpx;" mode="aspectFill"></image>
+    <image src="https://picsum.photos/700" style="height:300rpx;width:100%;margin-top:20rpx;" mode="aspectFill"></image>
+    <image src="/images/detail.jpg"></image>
+    <view style="height:120rpx;"></view>
+  </view>
+  <!-- 底部部分 -->
+<view class="bottom" style="padding-bottom: {{isIphoneX ? '40rpx' : '0rpx'}};height:{{isIphoneX ? '160rpx' : '120rpx'}}">
+  <view style="position: relative;margin-right: 10px;" bindtap="goCar">
+    <image src="/images/black-car.png" style="width: 80rpx; height: 80rpx; display: block" />
+    <mp-badge content="4" style="position: absolute;top: -.4em;left: 45rpx;" />
+  </view>
+  <van-button type="info" round color="#ff4d94" bindtap="{{baoming}}">加入购物车</van-button>
+</view>
+</view>

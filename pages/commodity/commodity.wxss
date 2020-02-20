@@ -1,0 +1,86 @@
+#container {
+  /* padding:30rpx; */
+}
+
+#search {
+  margin: 30rpx;
+  box-sizing: border-box;
+  padding: 15rpx;
+  display: flex;
+  height: 60rpx;
+  border-radius: 10rpx;
+  justify-content: space-between;
+  align-items: center;
+  background: #e0e0e0;
+}
+
+.search_header {
+  display: flex;
+  align-items: center;
+}
+
+.search_p {
+  width: 500rpx;
+  padding-left: 15rpx;
+}
+
+#nav_txt {
+  background: #f3f3f3;
+}
+
+.nav_txt {
+  white-space: nowrap;
+}
+
+.nav_txt_active_up {
+
+  color: #ff4d94;
+  
+}
+.nav_txt_active_down {
+  color: rgb(252, 243, 243)!important;
+  background: #ff4d94;
+  border-radius: 20rpx;
+}
+
+.nav_txt_item {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 6rpx;
+  margin: 15rpx;
+  border-radius: 10rpx;
+  display: inline-block;
+  text-align: center;
+}
+
+#content {
+  background: #f3f3f3;
+}
+
+.content {
+}
+
+.content_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content_car {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #ff4d94;
+}
+
+/* 格子 */
+
+.van-grid-item__content {
+  padding: 0px 8px 0 8px !important;
+  padding: var(--grid-item-content-padding, 0px 8px 0 8px) !important;
+}

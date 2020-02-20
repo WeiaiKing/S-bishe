@@ -1,0 +1,42 @@
+<view id="container">
+  <view id="address_cell">
+    <van-cell-group>
+      <van-cell title="广西钦州市钦南区北部湾大学西四115号" title-width="580rpx;" label="姓名 111111" border="{{ false }}" icon="/images/address1.png" color="red" is-link url="/pages/user-address/user-address" title-class="cell_title" />
+    </van-cell-group>
+  </view>
+  <view id="commodity">
+    <van-card num="2" price="2.00" desc="手工生日礼物" title="蝴蝶风筝" thumb="https://picsum.photos/200" />
+    <van-divider/>
+    <van-card num="2" price="2.00" desc="手工生日礼物" title="蝴蝶风筝" thumb="https://picsum.photos/200" />
+    <van-divider/>
+    <van-card num="2" price="2.00" desc="手工生日礼物" title="蝴蝶风筝" thumb="https://picsum.photos/200" />
+    <van-divider/>
+    <van-card num="2" price="2.00" desc="手工生日礼物" title="蝴蝶风筝" thumb="https://picsum.photos/200" />
+    <van-divider/>
+  </view>
+  <view id="bottom">
+    <view class="bottom_flex">
+      <span>商品原价</span>
+      <span style="color:#ff4d94">￥230.4</span>
+    </view>
+    <van-divider/>
+    <view class="bottom_flex">
+      <span>商品优惠</span>
+      <span style="color:#ff4d94">-￥27</span>
+    </view>
+    <van-divider/>
+    <view style="text-align:right;height:80rpx;margin-top:40rpx;">
+      <span>合计</span>
+      <span style="color:#ff4d94">￥163.4</span>
+    </view>
+  </view>
+  <view style="height:20rpx;"></view>
+  <!-- 底部部分 -->
+  <view class="bottom">
+    <view>
+      <span>需支付</span>
+      <span style="color:#ff4d94;">￥163.4</span>
+    </view>
+    <van-button type="info" round color="#ff4d94" bindtap="{{baoming}}">去支付</van-button>
+  </view>
+</view>
