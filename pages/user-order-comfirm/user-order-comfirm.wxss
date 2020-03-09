@@ -1,45 +1,34 @@
 page {
   background: #f3f3f3;
 }
-
-#address_cell {
-  margin: 20rpx 30rpx;
-}
-
 .cell_title {
   font-weight: 700;
 }
 
-.van-cell {
-  padding: var(--cell-vertical-padding, 10px) var(--cell-horizontal-padding, 4px) !important;
-}
-
 #commodity {
-  margin: 0 30rpx;
   background: #fff;
+  margin: 20rpx 0;
 }
 .van-card__price {
 color: var(--card-price-color,#111)!important;
-
 }
-
 .van-card__content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .van-card{
-  padding: var(--card-padding,8px 15px)!important;
+background-color: var(--card-background-color,#fff)!important;
 
 }
 .van-divider {
   margin: var(--divider-margin, of 0px 0) !important;
 }
 
-#bottom {
+#bottom-content {
   background: #fff;
   padding: 0 30rpx;
-  margin: 20rpx 30rpx 120rpx 30rpx;
+  /* margin: 20rpx 30rpx 120rpx 30rpx; */
 }
 
 .bottom_flex {
@@ -48,6 +37,7 @@ color: var(--card-price-color,#111)!important;
   align-items: center;
   height: 120rpx;
 }
+
 .bottom {
     position: fixed;
     bottom: 0;
@@ -70,4 +60,12 @@ button:not([size='mini']) {
     color: #fff;
     font-size: 34rpx;
 }
-
+.dialog-confirm {
+  padding: 0 30rpx;
+}
+.dialog-confirm button:not([size='mini']) {
+  /* stylesheetmin-height: 80rpx; */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}

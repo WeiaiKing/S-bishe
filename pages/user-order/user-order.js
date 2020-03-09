@@ -9,9 +9,24 @@ Page({
     active: 0
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  goDelivery(){
+    wx.navigateTo({
+      url: '../user-order-detail/user-order-detail',
+      success: function (res) { },
+    })
+  },
+  goreceiving(){
+    wx.navigateTo({
+      url: '../user-order-receiving/user-order-receiving',
+      success: function (res) { },
+    })
+  },
+  gocomfirm(){
+    wx.navigateTo({
+      url: '../user-order-detail-comfirm/user-order-detail-comfirm',
+      success: function (res) { },
+    })
+  },
   onLoad: function (options) {
     //检测iPhone X
     let modelmes = wx.getStorageSync('modelmes');

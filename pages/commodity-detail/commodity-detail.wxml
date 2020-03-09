@@ -2,9 +2,9 @@
   <view class="page-body">
     <view class="page-section page-section-spacing swiper">
       <swiper circular="true" indicator-dots="true" autoplay="true" interval="4000" duration="500">
-        <block wx:for="{{background}}" wx:key="{{index}}">
+        <block wx:for="{{background}}" wx:key="index">
           <swiper-item class="swiper-item auth">
-            <image mode="aspectFit" src="{{item}}"></image>
+            <image mode="aspectFill" src="{{item}}"></image>
             <van-button class="btn" type="info" open-type="getUserInfo" bind:getuserinfo="onAuth2" data-url="/pages/faxian/detail/detail?id={{item.id}}" hover-class="hover_btn"></van-button>
           </swiper-item>
         </block>
@@ -16,6 +16,13 @@
     <view style="color:#ff4d94;">￥158</view>
     <view style="color:#9c9c9c;font-size:24rpx;text-decoration:line-through">￥178</view>
     <view style="color:#555;margin-top:15rpx;">发布者：易烊千玺</view>
+  </view>
+  <view id="gostore" bindtap="gostore">
+    <view style="display: flex;align-items: center;">
+      <image style="height:60rpx;width:60rpx;border-radius: 50%;margin-right:30rpx;" src="/images/logo.png"></image>
+      <view>极速云商</view>
+    </view>
+    <view class="border">进店逛逛</view>
   </view>
   <view id="body">
     <view style="color:black;margin-bottom:20rpx;">商品详情</view>
@@ -35,18 +42,131 @@
       <span>工艺：</span>
       <span>手工</span>
     </view>
-    <image src="https://picsum.photos/800" style="height:300rpx;width:100%;margin-top:20rpx;" mode="aspectFill"></image>
+    <image src="https://picsum.photos/700" style="height:300rpx;width:100%;margin-top:20rpx;" mode="aspectFill"></image>
     <image src="https://picsum.photos/600" style="height:300rpx;width:100%;margin-top:20rpx;" mode="aspectFill"></image>
     <image src="https://picsum.photos/700" style="height:300rpx;width:100%;margin-top:20rpx;" mode="aspectFill"></image>
     <image src="/images/detail.jpg"></image>
     <view style="height:120rpx;"></view>
   </view>
   <!-- 底部部分 -->
-<view class="bottom" style="padding-bottom: {{isIphoneX ? '40rpx' : '0rpx'}};height:{{isIphoneX ? '160rpx' : '120rpx'}}">
-  <view style="position: relative;margin-right: 10px;" bindtap="goCar">
-    <image src="/images/black-car.png" style="width: 80rpx; height: 80rpx; display: block" />
-    <mp-badge content="4" style="position: absolute;top: -.4em;left: 45rpx;" />
+  <!-- <view class="bottom" style="padding-bottom: {{isIphoneX ? '40rpx' : '0rpx'}};height:{{isIphoneX ? '160rpx' : '120rpx'}}">
+    <view style="position: relative;margin-right: 10px;" bindtap="goCar">
+      <image src="/images/black-car.png" style="width: 80rpx; height: 80rpx; display: block" />
+      <mp-badge content="4" style="position: absolute;top: -.4em;left: 45rpx;" />
+    </view>
+    <van-button type="info" round color="#ff4d94" bindtap="">加入购物车</van-button>
+  </view> -->
+
+  <view id="goods-bottom">
+    <van-goods-action>
+      <van-goods-action-icon icon="like-o" text="收藏" />
+      <van-goods-action-icon icon="cart-o" text="购物车" info="{{cartNum}}" style="margin-left:-16rpx;" link-type="switchTab" url="/pages/car/car" />
+      <van-goods-action-button text="加入购物车" type="warning" bindtap="add_cart" />
+      <van-goods-action-button text="立即购买" bindtap="add_buy" />
+    </van-goods-action>
   </view>
-  <van-button type="info" round color="#ff4d94" bindtap="{{baoming}}">加入购物车</van-button>
-</view>
+
+  <view id="popup">
+    <view class="popup_cart">
+      <van-popup show="{{ add_cart }}" position="bottom" custom-style="height: 70%;" bind:close="add_cart_cloce" round>
+        <view class="dialog_cart">
+          <view style="display:flex;">
+            <image src="https://picsum.photos/200" style="width:160rpx;height:180rpx;border-radius:10rpx;"></image>
+            <view class="pop-cart-header-text">
+              <view style="color:#666;font-size:30rpx;">水密码水嫩透保湿爽快的积分卡 Spagna teratment</view>
+              <view>
+                <text style="color:#ff4d94;margin-right:10rpx;">￥699</text>
+                <text style="color:#9c9c9c;font-size:24rpx;text-decoration:line-through">￥999</text>
+              </view>
+            </view>
+          </view>
+          <view>颜色</view>
+          <view class="pop-cart-body">
+
+            <view>
+              <view class="{{select==1?'border-active':'border'}}" bindtap="select" data-id="1">
+                <text>蓝色炫酷色彩</text>
+              </view>
+              <view class="{{select==2?'border-active':'border'}}" bindtap="select" data-id="2">
+                <text>损色</text>
+              </view>
+            </view>
+            <view>
+              <view class="{{select==3?'border-active':'border'}}" bindtap="select" data-id="3">
+                <text>货色</text>
+              </view>
+              <view class="{{select==4?'border-active':'border'}}" bindtap="select" data-id="4">
+                <text>蓝色</text>
+              </view>
+            </view>
+          </view>
+          <view>尺码</view>
+          <view class="pop-cart-body">
+            <view class="{{select_size==1?'border-active':'border'}}" bindtap="selectSize" data-id="1">
+              <text>均码</text>
+            </view>
+            <view class="{{select_size==2?'border-active':'border'}}" bindtap="selectSize" data-id="2">
+              <text>xl</text>
+            </view>
+
+          </view>
+          <van-button color="#ff4d94" round bindtap="cart_confirm" class="fix-botttom">加入购物车</van-button>
+        </view>
+      </van-popup>
+    </view>
+    <view class=" popup_buy ">
+      <van-popup show="{{ add_buy }}"  position="bottom" custom-style="height: 70%;" bind:close="add_buy_cloce" round>
+        <view class="dialog_cart">
+          <view style="display:flex;">
+            <image src="https://picsum.photos/200" style="width:160rpx;height:180rpx;border-radius:10rpx;"></image>
+            <view class="pop-cart-header-text">
+              <view style="color:#666;font-size:30rpx;">水密码水嫩透保湿爽快的积分卡 Spagna teratment</view>
+              <view>
+                <text style="color:#ff4d94;margin-right:10rpx;">￥699</text>
+                <text style="color:#9c9c9c;font-size:24rpx;text-decoration:line-through">￥999</text>
+              </view>
+            </view>
+          </view>
+          <view>颜色</view>
+          <view class="pop-cart-body">
+
+            <view>
+              <view class="{{select==1?'border-active':'border'}}" bindtap="select" data-id="1">
+                <text>蓝色炫酷色彩</text>
+              </view>
+              <view class="{{select==2?'border-active':'border'}}" bindtap="select" data-id="2">
+                <text>损色</text>
+              </view>
+            </view>
+            <view>
+              <view class="{{select==3?'border-active':'border'}}" bindtap="select" data-id="3">
+                <text>货色</text>
+              </view>
+              <view class="{{select==4?'border-active':'border'}}" bindtap="select" data-id="4">
+                <text>蓝色</text>
+              </view>
+            </view>
+          </view>
+          <view>尺码</view>
+          <view class="pop-cart-body">
+            <view class="{{select_size==1?'border-active':'border'}}" bindtap="selectSize" data-id="1">
+              <text>均码</text>
+            </view>
+            <view class="{{select_size==2?'border-active':'border'}}" bindtap="selectSize" data-id="2">
+              <text>xl</text>
+            </view>
+
+          </view>
+          <view class="buy_num">
+            <view>购买数量</view>
+            <view>
+              <van-stepper value="{{ 1 }}" input-width="60rpx" button-size="50rpx" />
+            </view>
+          </view>
+          <van-button color="#ff4d94" round bindtap="buy_confirm">去支付</van-button>
+        </view>
+      </van-popup>
+
+    </view>
+  </view>
 </view>

@@ -14,17 +14,17 @@
   <view style="padding:30rpx;">
     <van-cell title="我的订单" is-link value="全部订单" url="/pages/user-order/user-order" />
     <van-grid border="{{ false }}">
-      <van-grid-item icon="/images/delivery.png" text="代配送" />
-      <van-grid-item icon="/images/harvest.png" text="待收货" />
-      <van-grid-item icon="/images/complete.png" text="已完成" />
-      <van-grid-item icon="/images/qian.png" text="已取消" />
+      <van-grid-item icon="/images/delivery.png" text="待配送" url="/pages/user-delivery/user-delivery"/>
+      <van-grid-item icon="/images/harvest.png" text="待收货" url="/pages/user-receiving/user-receiving"/>
+      <van-grid-item icon="/images/complete.png" text="已完成" url="/pages/user-complete/user-complete"/>
+      <van-grid-item icon="/images/qian.png" text="已取消" url="/pages/user-close/user-close"/>
     </van-grid>
 
     <view style="margin-top:15rpx;">
       <van-grid column-num="3" border="{{ false }}">
         <van-grid-item icon="/images/address.png" text="地址管理"   url="/pages/user-address/user-address"/>
-        <van-grid-item icon="/images/kefu.png" text="联系客服" />
-        <van-grid-item icon="/images/settin.png" text="账号设置" />
+        <van-grid-item icon="/images/kefu.png" text="联系客服" url="/pages/user-service/user-servive"/>
+        <van-grid-item icon="/images/settin.png" text="设置" url="/pages/user-setting/user-setting"/>
       </van-grid>
     </view>
   </view>

@@ -5,40 +5,40 @@ Page({
    * 页面的初始数据
    */
   data: {
+    nav_index: 1,
+  },
+  onLoad: function(options) {
 
   },
-  onLoad: function (options) {
-
+  // goSearch
+  input() {
+    wx.navigateTo({
+      url: '../index-search/index-search',
+      success: function (res) { },
+    })
   },
-  nav_txt: function (e) {
-    if (!(e.target.dataset.index == 1)) {
-      this.setData({
-        nav_index: e.target.dataset.index
-      })
-    }
-    if (e.target.dataset.index == 1) {
-      wx.navigateTo({
-        url: '../classification/classification',
-        success: function (res) {
-          console.log("跳转classification")
-        },
-        fail: function (res) {
-          console.log("跳转失败")
-        },
-      })
-    }
-    console.log(e.target.dataset.index)
+  // nav 
+  nav_txt: function(e) {
+    this.setData({
+      nav_index: e.currentTarget.dataset.index
+    })
   },
-
+// 添加购物车
+  addCart(){
+    wx.navigateTo({
+      url: "../commodity-detail/commodity-detail?add_cart='true'",
+      success: function(res) {},
+    })
+  },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
 
 
-  
+
 })

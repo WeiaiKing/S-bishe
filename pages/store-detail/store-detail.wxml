@@ -1,0 +1,63 @@
+<view id="storeDetail">
+   <view id="header">
+    <image src="https://picsum.photos/200" style="width:120rpx;height:120rpx;border-radius:50%;"></image>
+    <view>
+      <text>LINJY轻奢潮品店</text>
+      <view style="margin-top: -10rpx;">
+        <van-tag round type="danger" style='margin-right:10rpx;'>金牌掌柜</van-tag>
+        <van-tag round color="#f2826a">联合合伙人</van-tag>
+      </view>
+    </view>
+    <view class="flex-col">
+      <text>2.6万</text>
+      <text>粉丝数</text>
+    </view>
+    <view class="flex-col">
+      <image style="width:40rpx;height:40rpx;" src="/images/follow.png"></image>
+      <view>关注</view>
+    </view>
+  </view>
+  <view id="body">
+    <text>店铺好评99.30%</text>
+    <view class="body-flex">
+      <view>描述相符</view>
+      <view>
+        <view style="width:200rpx;">
+          <van-progress show-pivot="{{false}}" color="linear-gradient(to right, #be99ff, #7232dd)" percentage="90" stroke-width="10" />
+        </view>
+      </view>
+      <view>4.7</view>
+      <view>持平于同行</view>
+    </view>
+      <view class="body-flex">
+      <view>服务态度</view>
+      <view>
+        <view style="width:200rpx;">
+          <van-progress show-pivot="{{false}}" color="linear-gradient(to right, #be99ff, #7232dd)" percentage="90" stroke-width="10" />
+        </view>
+      </view>
+      <view>4.8</view>
+      <view>持平于同行</view>
+    </view>
+      <view class="body-flex">
+      <view>物流服务</view>
+      <view>
+        <view style="width:200rpx;">
+          <van-progress show-pivot="{{false}}" color="linear-gradient(to right, #be99ff, #7232dd)" percentage="90" stroke-width="10" />
+        </view>
+      </view>
+      <view>4.8</view>
+      <view>持平于同行</view>
+    </view>
+
+  </view>
+  <view id="fooder">
+    <view style="padding-left:30rpx;">基础信息</view>
+    <van-cell title="掌柜名" value="第一天" />
+    <van-cell title="服务电话" value="1192620781" />
+    <van-cell title="所在地" value="广西钦州" />
+    <van-cell title="资质" value="45370" />
+    <van-cell title="开店时间" value="2012-04-09 16:18:47" />
+  </view>
+
+</view>

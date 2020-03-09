@@ -1,14 +1,27 @@
 {
   "pages": [
     "pages/commodity/commodity",
+    "pages/store/store",
+    "pages/store-detail/store-detail",
     "pages/index/index",
     "pages/commodity-detail/commodity-detail",
     "pages/car/car",
+    "pages/index-search/index-search",
     "pages/user/user",
+    "pages/user-close/user-close",
+    "pages/user-delivery/user-delivery",
+    "pages/user-receiving/user-receiving",
+    "pages/user-complete/user-complete",
+    "pages/user-setting/user-setting",
+    "pages/user-service/user-servive",
     "pages/user-address/user-address",
+    "pages/user-address-confirm/user-address-confirm",
     "pages/user-address-create/user-address-create",
     "pages/user-address-editor/user-address-editor",
     "pages/user-order/user-order",
+    "pages/user-order-receiving/user-order-receiving",
+    "pages/user-order-detail-comfirm/user-order-detail-comfirm",
+    "pages/user-order-detail/user-order-detail",
     "pages/user-order-comfirm/user-order-comfirm"
   ],
   "window": {
@@ -68,6 +81,10 @@
     "van-tabs": "components/vant-weapp/tabs/index",
     "van-notice-bar": "components/vant-weapp/notice-bar/index",
     "van-divider": "components/vant-weapp/divider/index",
-    "van-card": "components/vant-weapp/card/index"
+    "van-card": "components/vant-weapp/card/index",
+    "van-tag": "components/vant-weapp/tag/index",
+    "van-progress": "components/vant-weapp/progress/index",
+    "van-toast": "components/vant-weapp/toast/index",
+    "van-steps": "components/vant-weapp/steps/index"
   }
 }

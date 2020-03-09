@@ -1,0 +1,34 @@
+page{
+  background: #f3f3f3;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 30rpx;
+}
+
+#header .flex-col {
+  color: #646566;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 26rpx;
+  justify-content: center;
+}
+#body{
+  padding: 30rpx;
+  margin: 30rpx 0;
+  background: #fff;
+}
+.body-flex{
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  width: 600rpx;
+  align-items: center;
+}
+#fooder{
+  background: #fff;
+}

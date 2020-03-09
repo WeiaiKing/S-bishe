@@ -60,30 +60,8 @@ Page({
         console.log(create.msg)
       })
     }, 100)
+  },
 
-
-  },
-  bindPickerChange: function (e) {
-    console.log(e)
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      index: e.detail.value
-    })
-  },
-  bindPickerEducation: function (e) {
-    console.log(e)
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      index_education: e.detail.value
-    })
-  },
-  bindPickerExperience: function (e) {
-    console.log(e)
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      index_experience: e.detail.value
-    })
-  },
   bindRegionChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({

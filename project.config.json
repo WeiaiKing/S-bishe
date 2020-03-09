@@ -4,20 +4,28 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false,
 		"coverView": true,
+		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.1",
-	"appid": "wxec1cc2167eae7c4d",
-	"projectname": "s_bishe",
+	"appid": "wx3d14acfe36550ca0",
+	"projectname": "S-bishe",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -94,6 +102,20 @@
 					"id": -1,
 					"name": "pages/user-order-comfirm/user-order-comfirm",
 					"pathName": "pages/user-order-comfirm/user-order-comfirm",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/store/store",
+					"pathName": "pages/store/store",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/store-detail/store-detail",
+					"pathName": "pages/store-detail/store-detail",
 					"scene": null
 				}
 			]

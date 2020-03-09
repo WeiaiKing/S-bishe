@@ -1,0 +1,48 @@
+<view id="store">
+  <view id="header" bindtap="gostore">
+    <image src="https://picsum.photos/200" style="width:120rpx;height:120rpx;border-radius:50%;"></image>
+    <view>
+      <text>LINJY轻奢潮品店</text>
+      <view style="margin-top: -10rpx;">
+        <van-tag round type="danger" style='margin-right:10rpx;'>金牌掌柜</van-tag>
+        <van-tag round color="#f2826a">联合合伙人</van-tag>
+      </view>
+    </view>
+    <view class="flex-col">
+      <text>2.6万</text>
+      <text>粉丝数</text>
+    </view>
+    <view class="flex-col" catchtap="follow" data-follow="{{follow}}">
+      <image style="width:40rpx;height:40rpx;" src="{{follow_url}}"></image>
+      <view>{{follow_text}}</view>
+    </view>
+  </view>
+
+  <view id="define_cell" style="margin:20rpx 0 30rpx 0;">
+    <view style="display:flex;align-items:center">
+      <view style="margin-right:15rpx;" class="{{active==1?'active':''}}" bindtap="active" data-active="1"> 首页</view>
+      <view bindtap="active" data-active="2" class="{{active==2?'active':''}}">所有商品</view>
+    </view>
+  </view>
+  <view id="define_cell" style="padding-right:30rpx;">
+    <view style="display:flex;align-items:center;">
+      <view style="background:#eb4d3d;color:#fff;margin-right:15rpx;height:30rpx;width:5rpx;"></view>
+      <view style="margin-right:15rpx;"> {{active_text}}</view>
+    </view>
+    <view style="display:flex;align-items:center;color:red;">
+      <view>MORE </view>
+      <view style="padding-bottom:4rpx;">></view>
+    </view>
+  </view>
+  <view id="commodity">
+    <van-card origin-price="689" price="493" desc="古驰竹韵女用谈香水" title="古驰（GUCCI）竹韵女士谈香水30ml竹韵女用谈香水" thumb="https://picsum.photos/200" title-class="title-class" price-class="price-class" tag="HOT" bindtap="gocommodity"/>
+
+    <van-card origin-price="689" price="493" desc="手工生日礼物" title="古驰（GUCCI）竹韵女士谈香水30ml竹韵女用谈香水" thumb="https://picsum.photos/200" title-class="title-class" price-class="price-class" />
+
+    <van-card origin-price="689" price="493" desc="手工生日礼物" title="抗衰老的减肥dfsdfsdfsdf了简单了解打了客服" thumb="https://picsum.photos/200" title-class="title-class" price-class="price-class" lazy-load/>
+
+
+    
+  </view>
+</view>
+<van-toast id="van-toast" />
